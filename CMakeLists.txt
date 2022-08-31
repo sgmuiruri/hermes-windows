@@ -71,9 +71,9 @@ endif()
 # - npm/package.json
 # - hermes-engine.podspec
 project(Hermes
-        VERSION 0.11.7
+        VERSION 0.68.0
         LANGUAGES C CXX)
-# Optional suffix like "rc3"
+# Optional suffix like "-rc3"
 set(VERSION_SUFFIX "")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/")
@@ -83,7 +83,7 @@ set(LLVH_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/external/llvh)
 include(Hermes)
 include(Lit)
 
-set(HERMES_RELEASE_VERSION ${PROJECT_VERSION}-${VERSION_SUFFIX})
+set(HERMES_RELEASE_VERSION ${PROJECT_VERSION}${VERSION_SUFFIX})
 
 include(FindPythonInterp)
 if (NOT PYTHONINTERP_FOUND)
