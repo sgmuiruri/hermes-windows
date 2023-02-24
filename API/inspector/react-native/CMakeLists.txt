@@ -2,9 +2,8 @@ include(FetchContent)
 
 FetchContent_Declare(
   reactnative
-  URL https://github.com/facebook/react-native/archive/a0800ffc7a676555aa9e769fc8fd6d3162de0ea6.zip
-  URL_HASH SHA256=80a3b89d92a48bd1d39533a6643e4f1390f2ce11db1377a50bd10d557e423857
-  DOWNLOAD_EXTRACT_TIMESTAMP true
+  URL https://github.com/facebook/react-native/archive/f7e35d4ef7d68d06fba1439c0aa6d9ed05b58a7f.zip
+  URL_HASH SHA256=9d639d90ae9d2d8748a6cd47d35e0c5bcee87721f918010e05a0a013b31dd087
 )
 
 FetchContent_GetProperties(reactnative)

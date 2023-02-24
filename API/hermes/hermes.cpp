@@ -1736,8 +1736,9 @@ jsi::String HermesRuntimeImpl::bigintToString(
   }
 
   vm::GCScope gcScope(runtime_);
-  vm::CallResult<vm::HermesValue> toStringRes =
-      phv(bigint).getBigInt()->toString(runtime_, radix);
+  vm::CallResult<vm::HermesValue> toStringRes = vm::BigIntPrimitive::toString(
+      runtime_, vm::createPseudoHandle(phv(bigint).getBigInt()), radix);
+
   checkStatus(toStringRes.getStatus());
   return add<jsi::String>(*toStringRes);
 }
@@ -2361,6 +2362,8 @@ vm::RuntimeConfig hardenedHermesRuntimeConfig() {
   config.withEnableEval(false);
   config.withArrayBuffer(false);
   config.withES6Proxy(false);
+  config.withEnableHermesInternal(false);
+  config.withEnableHermesInternalTestMethods(false);
 
   // Enabled hardening options.
   config.withRandomizeMemoryLayout(true);
