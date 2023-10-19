@@ -51,7 +51,7 @@ jobs:
       - script: echo TODO - Add Tests here
         displayName: '[Test] - To be Added via bug #77'
 
-      - ${{ if parameters.dependsOnSetup }}:
+      - ${{ if not(parameters.dependsOnSetup) }}:
         - script: mkdir $(Build.ArtifactStagingDirectory)\_manifest\$(BuildPlatform)\$(BuildFlavor)
           displayName: 📒 Prep for Manifest
 
