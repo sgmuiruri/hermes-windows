@@ -49,4 +49,4 @@ extends:
             displayName: Compute version numbers
       - template: .ado/jobs.yml@self
         parameters:
-          dependsOnSetup: true
+          isPublish: true
