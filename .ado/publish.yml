@@ -10,7 +10,13 @@ pr: none
 trigger:
   - main
 
-pool: OE-OfficePublic
+
+resources:
+  repositories:
+  - repository: OfficePipelineTemplates
+    type: git
+    name: 1ESPipelineTemplates/OfficePipelineTemplates
+    ref: refs/tags/release
 
 variables:
   - group: Hermes-Windows Secrets
@@ -22,17 +28,26 @@ variables:
   - name: tags
     value: production,externalfacing
 
-jobs:
-  - job: Setup
-    variables:
-      # Component Governance is ran as part of the Build Job.
-      - name: "skipComponentGovernanceDetection"
-        value: "true"
-    steps:
-      - script: node .ado/scripts/setVersionNumber.js
-        name: setVersions
-        displayName: Compute version numbers
-
-  - template: jobs.yml
-    parameters:
-      dependsOnSetup: true
+extends:
+  template: v1/Office.Official.PipelineTemplate.yml@OfficePipelineTemplates
+  parameters:
+    pool:
+      name: Azure-Pipelines-1ESPT-ExDShared
+      image: windows-latest
+      os: windows
+    stages:
+      - stage: main
+        jobs:
+          - job: Setup
+            variables:
+              # Component Governance is ran as part of the Build Job.
+              - name: "skipComponentGovernanceDetection"
+                value: "true"
+            steps:
+              - script: node .ado/scripts/setVersionNumber.js
+                name: setVersions
+                displayName: Compute version numbers
+         
+          - template: jobs.yml
+            parameters:
+              dependsOnSetup: true
