@@ -33,7 +33,7 @@ jobs:
     variables:
       semanticVersion: $[ dependencies.Setup.outputs['setVersions.semanticVersion'] ]
       fileVersion: $[ dependencies.Setup.outputs['setVersions.fileVersion'] ]
-    - ${{ if parameters.isPublish }}:
+    ${{ if parameters.isPublish }}:
       templateContext:
         type: artifactJob
         outputs:
@@ -102,7 +102,7 @@ jobs:
     dependsOn:
       - Build
     displayName: Create Nuget packages
-    - ${{ if parameters.isPublish }}:
+    ${{ if parameters.isPublish }}:
       templateContext:
         type: artifactJob
         outputs:
