@@ -39,7 +39,7 @@ extends:
         enabled: false
         enableExclusions: true
         exclusionPatterns: '.ts'
-        exclusionsFilePath: '$(Build.SourcesDirectory)/website'
+#        exclusionsFilePath: '$(Build.SourcesDirectory)/website'
     stages:
     - stage: main
       jobs:
