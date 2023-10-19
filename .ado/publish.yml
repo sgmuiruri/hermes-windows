@@ -36,18 +36,17 @@ extends:
       image: windows-latest
       os: windows
     stages:
-      - stage: main
-        jobs:
-          - job: Setup
-            variables:
-              # Component Governance is ran as part of the Build Job.
-              - name: "skipComponentGovernanceDetection"
-                value: "true"
-            steps:
-              - script: node .ado/scripts/setVersionNumber.js
-                name: setVersions
-                displayName: Compute version numbers
-         
-          - template: jobs.yml
-            parameters:
-              dependsOnSetup: true
+    - stage: main
+      jobs:
+      - job: Setup
+        variables:
+          # Component Governance is ran as part of the Build Job.
+          - name: "skipComponentGovernanceDetection"
+            value: "true"
+        steps:
+          - script: node .ado/scripts/setVersionNumber.js
+            name: setVersions
+            displayName: Compute version numbers
+      - template: jobs.yml
+        parameters:
+          dependsOnSetup: true
