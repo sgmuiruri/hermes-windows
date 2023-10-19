@@ -36,10 +36,10 @@ extends:
       os: windows
     sdl:
       eslint:
-        enabled: false
         enableExclusions: true
-        exclusionPatterns: '.js'
-#        exclusionsFilePath: '$(Build.SourcesDirectory)/website'
+        exclusionPatterns: |
+          '*.js'
+          '*.ts'
     stages:
     - stage: main
       jobs:
