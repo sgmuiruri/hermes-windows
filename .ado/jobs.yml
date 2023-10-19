@@ -35,7 +35,6 @@ jobs:
       fileVersion: $[ dependencies.Setup.outputs['setVersions.fileVersion'] ]
     ${{ if parameters.isPublish }}:
       templateContext:
-        type: artifactJob
         outputs:
           - output: pipelineArtifact
             targetPath: $(Build.ArtifactStagingDirectory)
@@ -104,7 +103,6 @@ jobs:
     displayName: Create Nuget packages
     ${{ if parameters.isPublish }}:
       templateContext:
-        type: artifactJob
         outputs:
           - output: pipelineArtifact
             targetPath: $(System.DefaultWorkingDirectory)\NugetRootFinal
