@@ -1,5 +1,5 @@
 parameters:
-  - name: dependsOnSetup
+  - name: isPublish
     type: boolean
     default : false
 
@@ -8,7 +8,7 @@ jobs:
     timeoutInMinutes: 120
     displayName: Build Hermes
     dependsOn: 
-      - ${{ if parameters.dependsOnSetup }}:
+      - ${{ if parameters.isPublish }}:
         - Setup
     strategy:
       matrix:
@@ -51,7 +51,7 @@ jobs:
       - script: echo TODO - Add Tests here
         displayName: '[Test] - To be Added via bug #77'
 
-      - ${{ if not(parameters.dependsOnSetup) }}:
+      - ${{ if not(parameters.isPublish) }}:
         - script: mkdir $(Build.ArtifactStagingDirectory)\_manifest\$(BuildPlatform)\$(BuildFlavor)
           displayName: 📒 Prep for Manifest
 
@@ -95,6 +95,13 @@ jobs:
     dependsOn:
       - Build
     displayName: Create Nuget packages
+    - ${{ if parameters.isPublish }}:
+      templateContext:
+        type: artifactJob
+        outputs:
+          - output: pipelineArtifact
+            targetPath: $(System.DefaultWorkingDirectory)\NugetRootFinal
+            artifactName: "Hermes-final-nuget"
     steps:
       - checkout: none
 
@@ -136,16 +143,14 @@ jobs:
           versioningScheme: byEnvVar
           versionEnvVar: Version
 
-      - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
-        displayName: 📒 Generate Manifest NuGet
-        condition: not(eq(variables['Build.Reason'], 'PullRequest'))
-        inputs:
-          BuildDropPath: $(System.DefaultWorkingDirectory)\NugetRootFinal
-
-      - ${{ if not(parameters.dependsOnSetup) }}:
+      - ${{ if not(parameters.isPublish) }}:
+        - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
+          displayName: 📒 Generate Manifest NuGet
+          condition: not(eq(variables['Build.Reason'], 'PullRequest'))
+          inputs:
+            BuildDropPath: $(System.DefaultWorkingDirectory)\NugetRootFinal
         - task: PublishBuildArtifacts@1
           displayName: "Publish final nuget artifacts"
           inputs:
             PathtoPublish: $(System.DefaultWorkingDirectory)\NugetRootFinal
             ArtifactName: "Hermes-final-nuget"
-
