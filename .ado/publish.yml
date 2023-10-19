@@ -47,6 +47,6 @@ extends:
           - script: node .ado/scripts/setVersionNumber.js
             name: setVersions
             displayName: Compute version numbers
-      - template: jobs.yml@self
+      - template: .ado/jobs.yml@self
         parameters:
           dependsOnSetup: true
