@@ -38,7 +38,7 @@ extends:
       eslint:
         enabled: false
         enableExclusions: true
-        exclusionPatterns: '.ts'
+        exclusionPatterns: '.js'
 #        exclusionsFilePath: '$(Build.SourcesDirectory)/website'
     stages:
     - stage: main
