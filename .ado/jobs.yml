@@ -142,9 +142,10 @@ jobs:
         inputs:
           BuildDropPath: $(System.DefaultWorkingDirectory)\NugetRootFinal
 
-      - task: PublishBuildArtifacts@1
-        displayName: "Publish final nuget artifacts"
-        inputs:
-          PathtoPublish: $(System.DefaultWorkingDirectory)\NugetRootFinal
-          ArtifactName: "Hermes-final-nuget"
+      - ${{ if not(parameters.dependsOnSetup) }}:
+        - task: PublishBuildArtifacts@1
+          displayName: "Publish final nuget artifacts"
+          inputs:
+            PathtoPublish: $(System.DefaultWorkingDirectory)\NugetRootFinal
+            ArtifactName: "Hermes-final-nuget"
 
