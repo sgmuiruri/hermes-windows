@@ -10,7 +10,6 @@ pr: none
 trigger:
   - main
 
-
 resources:
   repositories:
   - repository: OfficePipelineTemplates
@@ -38,6 +37,9 @@ extends:
     sdl:
       eslint:
         enabled: false
+        enableExclusions: true
+        exclusionPatterns: '.ts'
+        exclusionsFilePath: '$(Build.SourcesDirectory)/website'
     stages:
     - stage: main
       jobs:
