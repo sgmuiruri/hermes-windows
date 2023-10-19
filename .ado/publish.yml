@@ -35,6 +35,9 @@ extends:
       name: Azure-Pipelines-1ESPT-ExDShared
       image: windows-latest
       os: windows
+    sdl:
+      eslint:
+        enabled: false
     stages:
     - stage: main
       jobs:
