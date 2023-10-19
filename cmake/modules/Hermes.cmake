@@ -306,7 +306,7 @@ if (MSVC)
   if (NOT CLANG_CL)
     set(msvc_warning_flags
       # downgrade to keep this as a warning as level 2 warnings are bumped to error
-      -w44146 # Suppress 'unary minus operator applied to unsigned type, result still unsigned'
+      -w34146 # Suppress 'unary minus operator applied to unsigned type, result still unsigned'
 
       # Disabled warnings.
       -wd4141 # Suppress ''modifier' : used more than once' (because of __forceinline combined with inline)
