@@ -36,6 +36,7 @@ extends:
       os: windows
     sdl:
       eslint:
+        enabled: true
         exitOnFatalError: false
         enableExclusions: true
         exclusionPatterns: |
