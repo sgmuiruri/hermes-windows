@@ -41,6 +41,11 @@ function computeVersion() {
       return computeReleaseVersion();
     }
 
+    // $TODO DO NOT CHECK IN, FOR TESTING ONLY.
+    if (sourceBranch === "refs/heads/1espt") {
+        return computeMainVersion();
+      }
+
     fatalError(`Build script does not support source branch '${sourceBranch}'.`)
 }
 
