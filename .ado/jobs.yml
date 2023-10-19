@@ -33,6 +33,13 @@ jobs:
     variables:
       semanticVersion: $[ dependencies.Setup.outputs['setVersions.semanticVersion'] ]
       fileVersion: $[ dependencies.Setup.outputs['setVersions.fileVersion'] ]
+    - ${{ if parameters.isPublish }}:
+      templateContext:
+        type: artifactJob
+        outputs:
+          - output: pipelineArtifact
+            targetPath: $(Build.ArtifactStagingDirectory)
+            artifactName: HermesArtifacts
     steps:
       - task: PowerShell@2
         displayName: Run the build script for publish
