@@ -1,13 +1,13 @@
 {
     "hydrated": false,
     "properties": {
-      "helpUri": "https://eng.ms/docs/microsoft-security/security/azure-security/cloudai-security-fundamentals-engineering/security-integration/guardian-wiki/microsoft-guardian/general/baselines",
+      "helpUri": "https://eng.ms/docs/microsoft-security/security/azure-security/cloudai-security-fundamentals-engineering/security-integration/guardian-wiki/microsoft-guardian/general/suppressions",
       "hydrationStatus": "This file does not contain identifying data. It is safe to check into your repo. To hydrate this file with identifying data, run `guardian hydrate --help` and follow the guidance."
     },
     "version": "1.0.0",
-    "baselines": {
-      "guardian-baseline": {
-        "name": "guardian-baseline",
+    "suppressionSets": {
+      "default": {
+        "name": "default",
         "createdDate": "2023-10-20 17:35:00Z",
         "lastUpdatedDate": "2023-10-20 17:35:00Z"
       }
@@ -19,8 +19,9 @@
           "1e0c330b266a141b24783cd448754909c079d77778ca719a87d9103054dc5304"
         ],
         "memberOf": [
-          "guardian-baseline"
+          "default"
         ],
+        "justification": "Issue is with externally supplied runtime files",
         "createdDate": "2023-10-20 17:35:00Z"
       },
       "5d79e092f586c922e055f72258151b91f377cd1c2c78e27e4fc598c606366f4d": {
@@ -29,8 +30,9 @@
           "ffaa4d06391e23afd801662f1d6de75f8533a71ef7624e514a782edf7f3ae625"
         ],
         "memberOf": [
-          "guardian-baseline"
+          "default"
         ],
+        "justification": "Issue is with externally supplied runtime files",
         "createdDate": "2023-10-20 17:35:00Z"
       },
       "49e8e7ad781283ae8802319892250a4006856d9c3852fee3697782c64ad464a9": {
@@ -39,8 +41,9 @@
           "c56a6292e222ac02fd89569ff3e2c6c8bf5502be01951dfb4501f2d8ce74020f"
         ],
         "memberOf": [
-          "guardian-baseline"
+          "default"
         ],
+        "justification": "Issue is with externally supplied runtime files",
         "createdDate": "2023-10-20 17:30:57Z"
       },
       "68e113701e747b4059a9049f61fd8a252a85dc5237831c3cfd68f2927d4d2256": {
@@ -49,8 +52,9 @@
           "71cd99f14c24f620a431311e1cafccc72cacd7d672b83b70c0f218274b92e759"
         ],
         "memberOf": [
-          "guardian-baseline"
+          "default"
         ],
+        "justification": "Issue is with externally supplied runtime files",
         "createdDate": "2023-10-20 17:30:57Z"
       },
       "c70524081a73c41715cdab46358fe6327ff159007354e5b4a668a2425d553824": {
@@ -59,8 +63,9 @@
           "fad6825e3d348d034b8c80dfd092a0c793840691779fd2243155f28bb06c3900"
         ],
         "memberOf": [
-          "guardian-baseline"
+          "default"
         ],
+        "justification": "Issue is with externally supplied runtime files",
         "createdDate": "2023-10-20 17:30:57Z"
       },
       "07953f4ddc3f088bdf3148d3ef909fb06cb7007c1a67b6413cb5717c5f331796": {
@@ -69,8 +74,9 @@
           "51ce3ef8dc0762ca60e45a3c8f1c1894ac03fc7d27a43f7436dd4f0247214b53"
         ],
         "memberOf": [
-          "guardian-baseline"
+          "default"
         ],
+        "justification": "Issue is with externally supplied runtime files",
         "createdDate": "2023-10-20 17:30:57Z"
       },
       "4c903a862062b6c0be808cb40c7f8ee384614c58318daaa672338064cfd03324": {
@@ -79,8 +85,9 @@
           "20e7ffffcaaace21514fb625484e14a3cf8daccd4e0f12d7a2c00ed129dd3656"
         ],
         "memberOf": [
-          "guardian-baseline"
+          "default"
         ],
+        "justification": "Issue is with externally supplied runtime files",
         "createdDate": "2023-10-20 17:33:49Z"
       },
       "226aba214fcf3af558dcc286091032167a40dcd9e4c2d8725c168e3c8a5c1e98": {
@@ -89,8 +96,9 @@
           "615ead8b5e5d4ff04de0c80af408c27b8485e3b35ec3c55c5ba453cb41c72a9e"
         ],
         "memberOf": [
-          "guardian-baseline"
+          "default"
         ],
+        "justification": "Issue is with externally supplied runtime files",
         "createdDate": "2023-10-20 17:33:49Z"
       },
       "1538e6b629cdd2299dc82c2723cfbb755a6fa56216d3fe0d655c2d5a6f622482": {
@@ -99,8 +107,9 @@
           "69950da114241fd6f7edc61463e507ab88cea6469fa81e1c14d0448d4ea48eb0"
         ],
         "memberOf": [
-          "guardian-baseline"
+          "default"
         ],
+        "justification": "Issue is with externally supplied runtime files",
         "createdDate": "2023-10-20 17:33:49Z"
       },
       "3fd4c5fdc46555312b6aaf8fe930019de805bb6a73ab965b90e3f00e14de9b65": {
@@ -109,8 +118,9 @@
           "3d53fb5648e0e3b2b72d1b885dcac1c080971ae4b8082d375fefe2f3c11157be"
         ],
         "memberOf": [
-          "guardian-baseline"
+          "default"
         ],
+        "justification": "Issue is with externally supplied runtime files",
         "createdDate": "2023-10-20 17:33:49Z"
       }
     }
