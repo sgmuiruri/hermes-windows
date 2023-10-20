@@ -40,7 +40,8 @@ extends:
         exitOnFatalError: false
         enableExclusions: true
         exclusionPatterns: |
-          '**/*.*'
+          '**/*.js'
+          '**/*.ts'
     stages:
     - stage: main
       jobs:
