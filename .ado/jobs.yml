@@ -36,7 +36,7 @@ jobs:
     ${{ if parameters.isPublish }}:
       templateContext:
         outputs:
-          - output: pipelineArtifact
+          - output: buildArtifacts
             targetPath: $(Build.ArtifactStagingDirectory)
             artifactName: HermesArtifacts
     steps:
