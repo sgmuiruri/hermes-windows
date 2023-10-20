@@ -37,7 +37,7 @@ jobs:
       templateContext:
         outputs:
           - output: buildArtifacts
-            targetPath: $(Build.ArtifactStagingDirectory)
+            pathToPublish: $(Build.ArtifactStagingDirectory)
             artifactName: HermesArtifacts
     steps:
       - task: PowerShell@2
