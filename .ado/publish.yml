@@ -19,7 +19,6 @@ resources:
 
 variables:
   - group: Hermes-Windows Secrets
-  - group: InfoSec-SecurityResults
   - name: ArtifactServices.Symbol.AccountName
     value: microsoft
   - name: ArtifactServices.Symbol.PAT
