@@ -1,13 +1,13 @@
 {
     "hydrated": false,
     "properties": {
-      "helpUri": "https://eng.ms/docs/microsoft-security/security/azure-security/cloudai-security-fundamentals-engineering/security-integration/guardian-wiki/microsoft-guardian/general/suppressions",
+      "helpUri": "https://eng.ms/docs/microsoft-security/security/azure-security/cloudai-security-fundamentals-engineering/security-integration/guardian-wiki/microsoft-guardian/general/baselines",
       "hydrationStatus": "This file does not contain identifying data. It is safe to check into your repo. To hydrate this file with identifying data, run `guardian hydrate --help` and follow the guidance."
     },
     "version": "1.0.0",
-    "suppressionSets": {
-      "default": {
-        "name": "default",
+    "baselines": {
+      "guardian-baseline": {
+        "name": "guardian-baseline",
         "createdDate": "2023-10-20 17:35:00Z",
         "lastUpdatedDate": "2023-10-20 17:35:00Z"
       }
@@ -19,7 +19,7 @@
           "1e0c330b266a141b24783cd448754909c079d77778ca719a87d9103054dc5304"
         ],
         "memberOf": [
-          "default"
+          "guardian-baseline"
         ],
         "createdDate": "2023-10-20 17:35:00Z"
       },
@@ -29,7 +29,7 @@
           "ffaa4d06391e23afd801662f1d6de75f8533a71ef7624e514a782edf7f3ae625"
         ],
         "memberOf": [
-          "default"
+          "guardian-baseline"
         ],
         "createdDate": "2023-10-20 17:35:00Z"
       },
@@ -39,7 +39,7 @@
           "c56a6292e222ac02fd89569ff3e2c6c8bf5502be01951dfb4501f2d8ce74020f"
         ],
         "memberOf": [
-          "default"
+          "guardian-baseline"
         ],
         "createdDate": "2023-10-20 17:30:57Z"
       },
@@ -49,7 +49,7 @@
           "71cd99f14c24f620a431311e1cafccc72cacd7d672b83b70c0f218274b92e759"
         ],
         "memberOf": [
-          "default"
+          "guardian-baseline"
         ],
         "createdDate": "2023-10-20 17:30:57Z"
       },
@@ -59,7 +59,7 @@
           "fad6825e3d348d034b8c80dfd092a0c793840691779fd2243155f28bb06c3900"
         ],
         "memberOf": [
-          "default"
+          "guardian-baseline"
         ],
         "createdDate": "2023-10-20 17:30:57Z"
       },
@@ -69,7 +69,7 @@
           "51ce3ef8dc0762ca60e45a3c8f1c1894ac03fc7d27a43f7436dd4f0247214b53"
         ],
         "memberOf": [
-          "default"
+          "guardian-baseline"
         ],
         "createdDate": "2023-10-20 17:30:57Z"
       },
@@ -79,7 +79,7 @@
           "20e7ffffcaaace21514fb625484e14a3cf8daccd4e0f12d7a2c00ed129dd3656"
         ],
         "memberOf": [
-          "default"
+          "guardian-baseline"
         ],
         "createdDate": "2023-10-20 17:33:49Z"
       },
@@ -89,7 +89,7 @@
           "615ead8b5e5d4ff04de0c80af408c27b8485e3b35ec3c55c5ba453cb41c72a9e"
         ],
         "memberOf": [
-          "default"
+          "guardian-baseline"
         ],
         "createdDate": "2023-10-20 17:33:49Z"
       },
@@ -99,7 +99,7 @@
           "69950da114241fd6f7edc61463e507ab88cea6469fa81e1c14d0448d4ea48eb0"
         ],
         "memberOf": [
-          "default"
+          "guardian-baseline"
         ],
         "createdDate": "2023-10-20 17:33:49Z"
       },
@@ -109,7 +109,7 @@
           "3d53fb5648e0e3b2b72d1b885dcac1c080971ae4b8082d375fefe2f3c11157be"
         ],
         "memberOf": [
-          "default"
+          "guardian-baseline"
         ],
         "createdDate": "2023-10-20 17:33:49Z"
       }
