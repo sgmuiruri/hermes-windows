@@ -35,6 +35,8 @@ extends:
       image: windows-latest
       os: windows
     sdl:
+      suppression:
+        suppressionFile: $(Build.SourcesDirectory)\.ado\guardian\SDL\.gdnsuppress
       eslint:
         enabled: true
         exitOnFatalError: false
