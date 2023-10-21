@@ -38,7 +38,7 @@ jobs:
         outputs:
           - output: buildArtifacts
             PathtoPublish: $(Build.ArtifactStagingDirectory)
-            artifactName: HermesArtifacts
+            ArtifactName: HermesArtifacts
     steps:
       - task: PowerShell@2
         displayName: Run the build script for publish
