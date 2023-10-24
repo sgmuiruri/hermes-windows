@@ -5,6 +5,8 @@
 
 cmake_minimum_required(VERSION 3.13.0)
 
+message("CMAKE_SYSTEM_VERSION: ${CMAKE_SYSTEM_VERSION}")
+
 # Set the VERSION variables based on the project command
 if (POLICY CMP0048)
   cmake_policy(SET CMP0048 NEW)
