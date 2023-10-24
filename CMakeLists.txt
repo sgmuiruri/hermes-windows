@@ -5,8 +5,6 @@
 
 cmake_minimum_required(VERSION 3.13.0)
 
-message("CMAKE_SYSTEM_VERSION: ${CMAKE_SYSTEM_VERSION}")
-
 # Set the VERSION variables based on the project command
 if (POLICY CMP0048)
   cmake_policy(SET CMP0048 NEW)
@@ -558,6 +556,7 @@ endif()
 
 # If we have no ICU, then error out.
 if (NOT ICU_FOUND)
+  message("CMAKE_SYSTEM_VERSION: ${CMAKE_SYSTEM_VERSION}")
   message(FATAL_ERROR "Unable to find ICU.")
 endif()
 
